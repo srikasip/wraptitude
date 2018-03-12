@@ -1,0 +1,60 @@
+html{
+  --copy-size: 12pt;
+  --title-size:18pt;
+  --padding-def:16px;
+  --accent-color:#3333bb;
+  --black-color:#444444;
+  text-align:center;
+}
+
+html, body{
+  width:100%;
+  height:100%;
+  padding:0;
+  margin:0;
+  font-size:var(--copy-size);
+  color:var(--black-color);
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  padding:var(--padding-def);
+  background-color:orange;
+}
+
+.icon-wrapt-logo{
+  height:100%;
+}
+#logoBox{
+  overflow:visible;
+}
+
+@media (max-width: 575.98px) {
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  body{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
