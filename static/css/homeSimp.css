@@ -64,15 +64,17 @@ html, body{
   left:0;
   background-color:rgba(248, 249, 250,0.6);
 }
-.carousel-caption button{
+.carousel-caption a{
+  margin-top:2em;
   padding:16px;
   border:2px Solid var(--accent-color);
   cursor:pointer;
   background-color:var(--white-color);
 }
 
-.carousel-caption button:hover{
+.carousel-caption a:hover{
   padding:16px;
+  text-decoration:none;
   /*border:3px Solid var(--accent-color);*/
   cursor:pointer;
   background-color:#fff;
