@@ -215,6 +215,9 @@ hr{
   width:75%;
 }
 
+div#reWraptCarousel{
+  height:60vh;
+}
 
 #rewrapt-1{
   background-image:url('../images/rewrapt/gift-example__indigo.jpg');
@@ -238,7 +241,7 @@ hr{
 }
 
 .reWrapt-writeup .rewrapt-desc{
-  display:block;
+  display:flex;
   color:var(--grey-color);
   clear:both;
   font-size:1em;
@@ -256,6 +259,7 @@ hr{
   border-top:1px solid #bcbcbc;
   text-align:center;
   margin-top:1em;
+  padding-bottom:2em;
 }
 
 .footer div{
@@ -290,9 +294,7 @@ hr{
     width:100%;
     height:100%;
   }
-  div#reWraptCarousel{
-    height:60vh;
-  }
+
 
   div.reWrapt-writeup{
     width:auto;
@@ -381,9 +383,6 @@ hr{
     width:100%;
     height:100%;
   }
-  div#reWraptCarousel{
-    height:60vh;
-  }
 
   div.reWrapt-writeup{
     width:auto;
@@ -419,7 +418,7 @@ hr{
     float:left;
     margin:0;
     padding-right:16px;
-    border:none;
+    border-right:1px solid var(--accent-color);
   }
   div.rewrapt-desc-box div.tokens{
     float:left;
@@ -484,9 +483,6 @@ hr{
   .carousel-item{
     width:100%;
     height:100%;
-  }
-  div#reWraptCarousel{
-    height:60vh;
   }
 
   div.reWrapt-writeup{
@@ -597,9 +593,6 @@ hr{
     width:100%;
     height:100%;
   }
-  div#reWraptCarousel{
-    height:60vh;
-  }
 
   div.reWrapt-writeup{
     width:auto;
@@ -681,6 +674,19 @@ hr{
     top:100px;
     right:32px;
   }
+  .occasion{
+    display:block;
+    float:left;
+    margin:0;
+    height:200px;
+    width:calc(100%/5);
+    line-height:200px;
+  }
+  .occasion div{
+    font-weight:400;
+    font-size:1.25em;
+  }
+
   .showcase img{
     display:inline-block;
     width:calc(100%/4 - 40px);
@@ -695,9 +701,6 @@ hr{
   .carousel-item{
     width:100%;
     height:100%;
-  }
-  div#reWraptCarousel{
-    height:60vh;
   }
 
   div.reWrapt-writeup{
