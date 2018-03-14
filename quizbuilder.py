@@ -17,7 +17,7 @@ def LoadQuiz(sentQuizDict):
   with open("templates/quizStuff/quiz.html", "r") as quizTemp:
     quizContent = quizTemp.read()
 
-  quizContent = quizContent.decode('utf-8').replace(u"||_REPLACE ME WITH QUIZ_||", allQuestions.decode('utf-8'))
+  quizContent = quizContent.replace(u"||_REPLACE ME WITH QUIZ_||", allQuestions)
 
   return quizContent
 
