@@ -1,7 +1,14 @@
 $(document).ready(function(){
   SmoothScrollLinks();
+  occassionRedirect();
 });
 
+
+function occassionRedirect(){
+  $(".occasionsBox .occasion div").click(function(){
+    window.location.replace("/quiz")
+  });
+}
 
 function SmoothScrollLinks()
 {
