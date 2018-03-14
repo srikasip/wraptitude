@@ -4,17 +4,17 @@ from operator import itemgetter
 from pprint import pprint
 
 
-# database = "d47tunqullfegl"
-# user = "hsjcwbnmmxtndd"
-# host = "ec2-54-225-255-132.compute-1.amazonaws.com"
-# port ='5432'
-# password = "d0b8ebd8460008cb897a7afc2cee5faeb3134dc5d1a37ed4edac1f1e2fc4ef31"
+database = "d7vi1mstte1dkp"
+user = "kdenbwpcekclck"
+host = "ec2-54-197-254-189.compute-1.amazonaws.com"
+port ='5432'
+password = "a7ed71fef239b7582c87af0a14c25bb89b4f86f6d66f19d577a7db9b38512094"
 
-database = "wrapt_gratitude_development"
-user = "srikasip"
-host = "localhost"
-port =''
-password = ''
+# database = "wrapt_gratitude_development"
+# user = "srikasip"
+# host = "localhost"
+# port =''
+# password = ''
 
 # database = "SurgFakeNameDB"
 # user = "srikasip"
