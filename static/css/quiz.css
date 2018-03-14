@@ -1,0 +1,189 @@
+html{
+  --copy-size: 12pt;
+  --title-size:18pt;
+  --padding-def:16px;
+  --accent-color:#92a7ce;
+  --grey-color:#4e4c4d;
+  --black-color:#333;
+  --white-color:#f8f9fa;
+  --fancy-font:"Montserrat";
+  --reg-font:"Montserrat";
+  text-align:center;
+}
+
+html, body{
+  height:100%;
+  width:100%;
+
+  font-family:var(--reg-font), sans-serif;
+  background-color:var(--white-color);
+}
+.navbar{
+  padding-left:0px;
+  padding-right:0px;
+}
+.logoBox
+{
+  font-family:var(--fancy-font);
+  padding:8px;
+  border: 2px solid var(--accent-color);
+  border-radius:3px;
+  font-size:1.5em;
+  letter-spacing: 3px;
+}
+.nav-item{
+  font-family:var(--reg-font);
+  padding-left:30px;
+  width:auto;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color:var(--black-color);
+}
+
+h2{
+  font-family: var(--fancy-font);
+  width:100%;
+  font-size:1.75em;
+  clear:both;
+  text-align:center;
+  padding-top:32px;
+  padding-bottom:32px;
+}
+
+h4{
+  width:60%;
+  text-align:center;
+  font-size:1em;
+  font-weight:700;
+  margin-left:auto;
+  margin-right:auto;
+  color:var(--grey-color);
+  padding-bottom:32px;
+
+}
+
+.imageHomes{
+  display:none;
+}
+
+.footer{
+  width:100%;
+  clear:both;
+  border-top:1px solid #bcbcbc;
+  text-align:center;
+  margin-top:1em;
+  padding-bottom:2em;
+}
+
+.footer div{
+  margin-top:4em;
+  text-align:center;
+  float:none;
+  clear:both;
+}
+#icon-gift-better-gift-wrapt{
+  margin-top:4em;
+  width:300px;
+}
+
+.allQuestionsSlider{
+  width:100%;
+  height:400px;
+}
+
+.questionBlock{
+  display:none;
+  width:100%;
+  height:100%;
+  margin:16px;
+  padding:16px;
+  background-color:#fff;
+}
+
+.nextQuestion{
+  background-color:var(--white-color);
+  padding:8px;
+  color:var(--accent-color);
+  border:3px solid var(--accent-color);
+  border-radius:2px;
+  display:block;
+  clear:both;
+  float:right;
+  cursor:pointer;
+
+}
+
+span.count{
+  font-size:0.8em;
+  color:var(--grey-color);
+  display:block;
+  float:left;
+  clear:both;
+}
+div.progBar{
+  width:calc(4 * 100%/12);
+  margin-top:16px;
+  height:5px;
+  float:left;
+  clear:both;
+  background-color:var(--accent-color);
+}
+div.responseBox{
+  clear:both;
+  float:left;
+  width:100%;
+  margin-top:32px;
+}
+
+.prompt{
+  display:block;
+  clear:both;
+  float:left;
+  width:100%;
+  text-align:left;
+  font-size:1.2em;
+  margin-top:32px;
+
+}
+
+
+@media (max-width: 575.98px) {
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .navbar{
+    padding:16px;
+  }
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  body{
+    width:768px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1250px) {
+  body{
+    width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+
+
+@media (min-width: 1250px) {
+  body{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}

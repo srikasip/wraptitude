@@ -65,7 +65,8 @@ html, body{
   background-color:rgba(248, 249, 250,0.6);
 }
 .carousel-caption a{
-  margin-top:2em;
+  display:inline-block;
+  margin-top:1em;
   padding:16px;
   border:2px Solid var(--accent-color);
   cursor:pointer;
