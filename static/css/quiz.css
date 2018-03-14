@@ -40,6 +40,16 @@ html, body{
 .navbar-light .navbar-nav .nav-link{
   color:var(--black-color);
 }
+input.inputResp{
+  width:80%;
+  height:2.5em;
+  border-style:none;
+  border-bottom:2px solid var(--accent-color);
+  line-height: 2.5em;
+  vertical-align: 2.5em;
+
+}
+
 
 h2{
   font-family: var(--fancy-font);
