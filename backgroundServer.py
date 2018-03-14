@@ -22,6 +22,7 @@ def getQuiz():
   quizDict = dbHand.getSurveyQuestions("16")
   quizPage = quizB.LoadQuiz(quizDict)
 
+  #return render_template('quizStuff/quizTester.html')
   return render_template_string(quizPage)
 
 if __name__ == '__main__':

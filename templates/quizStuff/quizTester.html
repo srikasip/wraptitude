@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>reWrapt</title>
+
+
+    <!-- Get bootstrap and jquery with all dependencies for JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+
+    <!-- Get bootstrap up as css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/quiz.css')}}" media="screen" />
+
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+        <div class="fancyText logoBox">reWrapt</div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="allQuestionsSlider">
+      <div class="questionBlock w3-animate-right">
+        <span class="count">
+          2 of 12
+        </span>
+        <div class="progBar" style="width:calc(2 * 100%/12)"></div>
+        <span class="prompt">
+          What is her name?
+        </span>
+        <div class="responseBox">
+          <input type="text" class="inputResp" />
+        </div>
+        <button class="nextQuestion">NEXT</button>
+      </div>
+
+      <div class="questionBlock w3-animate-right">
+        <span class="count">
+          3 of 12
+        </span>
+        <div class="progBar" style="width:calc(3 * 100%/12)"></div>
+        <span class="prompt">
+          What is the relationship?
+        </span>
+        <div class="responseBox singleSelect">
+          <div class="option">Wife</div>
+          <div class="option">Girlfriend</div>
+          <div class="option">Mother</div>
+          <div class="option otherBox" data-name="other483">Other</div>
+          <div class="otherResponse" id="other483">
+            <input type="text" class="inputResp" />
+          </div>
+          <div class="optionExplanation">
+            <span class="optionExplainer">This is a relationship</span>
+          </div>
+        </div>
+        <button class="nextQuestion">NEXT</button>
+      </div>
+
+
+      <div class="questionBlock w3-animate-right">
+        <span class="count">
+          4 of 12
+        </span>
+        <div class="progBar" style="width:calc(4 * 100%/12)"></div>
+        <span class="prompt">
+          Her personality?
+        </span>
+        <div class="responseBox multiSelect">
+          <div class="option">Happy</div>
+          <div class="option">Sad</div>
+          <div class="option">Colorful</div>
+          <div class="option">Hipster Cool</div>
+          <div class="option">Buttery</div>
+          <div class="option otherBox" data-name="other483">Other</div>
+          <div class="otherResponse" id="other483">
+            <input type="text" class="inputResp" />
+          </div>
+          <div class="optionExplanation">
+            <span class="optionExplainer">This is a relationship</span>
+          </div>
+        </div>
+        <button class="nextQuestion">NEXT</button>
+      </div>
+
+
+      <div class="questionBlock w3-animate-right">
+        <span class="count">
+          5 of 12
+        </span>
+        <div class="progBar" style="width:calc(4 * 100%/12)"></div>
+        <span class="prompt">
+          What's her foodie type?
+        </span>
+        <div class="responseBox">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <span class="minRange">#blessed</span>
+          <span class="maxRange">#ugh</span>
+        </div>
+        <button class="nextQuestion">NEXT</button>
+      </div>
+
+    </div>
+
+
+
+    <div class="footer">
+      <svg id="icon-gift-better-gift-wrapt" viewBox="0 0 188 32">
+        <use xlink:href="#icon-gift-better-gift-wrapt"></use>
+      </svg>
+      <div>2017 Wrapt™ All Rights Reserved | Privacy Policy | Terms of Service | Returns</div>
+    </div>
+
+  </body>
+</html>
