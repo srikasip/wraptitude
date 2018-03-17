@@ -24,6 +24,9 @@ def BuildRecommendations(recDict):
     oneRec = recBlock.replace("||_gift_id_||", str(rec["id"]))
     oneRec = oneRec.replace("||_gift_title_||", rec["title"])
     oneRec = oneRec.replace("||_gift_description_||", rec["description"])
+    oneRec = oneRec.replace("||_selling_price_||", '%.2f' % rec["selling_price"])
+    oneRec = oneRec.replace("||_carousel_display_||", str(rec["id"]))
+
     subCarHtml = ""
     toplineImg = ""
     if len(rec["images"]) > 1:
@@ -34,7 +37,7 @@ def BuildRecommendations(recDict):
         subCarImages += '<img id="rec'+str(rec["id"])+'_'+str(count)+'" class="recSubImage' 
         if count == 1:
           subCarImages += ' showSubImage'
-          toplineImg = 'https://wrapt-gratitude-production.s3.amazonaws.com/uploads/' + image["image_url"]
+          #toplineImg = 'https://wrapt-gratitude-production.s3.amazonaws.com/uploads/' + image["image_url"]
         subCarImages += '" src="https://wrapt-gratitude-production.s3.amazonaws.com/uploads/'
         subCarImages += image["image_url"]+'" />'
         subCarImages += "\n"
@@ -44,11 +47,12 @@ def BuildRecommendations(recDict):
     else:
       subCarHtml = '<div class="giftShowcase" style="background-image:url(\'https://wrapt-gratitude-production.s3.amazonaws.com/uploads/'
       subCarHtml += rec["images"][0]["image_url"]+'\');"></div>'
-      toplineImg = 'https://wrapt-gratitude-production.s3.amazonaws.com/uploads/' + rec["images"][0]["image_url"]
+      #toplineImg = 'https://wrapt-gratitude-production.s3.amazonaws.com/uploads/' + rec["images"][0]["image_url"]
 
+    toplineImg = 'https://wrapt-gratitude-production.s3.amazonaws.com/uploads/' + rec["carousel_img"][0]["image_url"]
     oneRec = oneRec.replace("||_showcase_block_||", subCarHtml)
     oneCar = '<img class="demo cursor" data-assoc=' + str(main_counter)
-    oneCar += ' id="tn_'+ str(main_counter)+'" src="'+toplineImg+'" />'
+    oneCar += ' id="tn_'+ str(rec["id"])+'" src="'+toplineImg+'" />'
     oneCar = carBlock.replace("||_carousel_item_||", oneCar)
     oneCar += "\n"
 

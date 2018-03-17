@@ -49,7 +49,14 @@ html, body{
 .navbar-light .navbar-nav .nav-link{
   color:var(--black-color);
 }
-
+h1{
+  font-family: var(--fancy-font);
+  width:100%;
+  clear:both;
+  text-align:center;
+  padding-top:32px;
+  padding-bottom:32px;  
+}
 h2{
   font-family: var(--fancy-font);
   width:100%;
@@ -61,7 +68,7 @@ h2{
 }
 
 h4{
-  width:60%;
+  /*width:60%;*/
   text-align:center;
   font-size:1em;
   font-weight:700;
@@ -105,6 +112,7 @@ h4{
   width:100%;
   height:75vh;
   position:relative;
+
   
 }
 .recSlide{
@@ -128,6 +136,7 @@ h4{
 }
 .recSubImage{
   height:100%;
+  /*min-width:100%;*/
   width:auto;
   display:none;
 }
@@ -191,13 +200,13 @@ a.prev,a.next{
   line-height: 50px;
   vertical-align: middle;
   text-align: center;
-  background-color:var(--accent-color);
+  background-color:rgba(16, 83, 206, 0.2);
   font-weight: bold;
   font-size: 20px;
   border-radius: 50%;
   user-select: none;
   -webkit-user-select: none;
-  color: #fff;
+  color: var(--grey-color);
   text-decoration: none;
 }
 .next {
@@ -206,13 +215,19 @@ a.prev,a.next{
 }
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color:rgba(16, 83, 206, 0.6);
   text-decoration: none;
+  color:#fff;
+}
+.thumbsParent{
+  text-align:center;
 }
 .row{
+  display:inline-block;
   height:calc(var(--carousel-height) - 20px);
   margin-top:20px;
-  width:100%;
+  margin-left:auto;
+  margin-right:auto;
   background-color:var(--white-color);
 }
 .row:after {
@@ -222,7 +237,10 @@ a.prev,a.next{
 }
 .column {
   float: left;
-  width: calc(100%/6);
+  /*margin-left:calc(100%/7 - 6*attr(width)/7);*/
+  max-width: calc(100%/6);
+  height:100%;
+  overflow: hidden;
 }
 .column img{
   height:100%;
@@ -237,9 +255,31 @@ a.prev,a.next{
   opacity: 1;
 }
 
-
-
-
+.closerBlock{
+  width:calc(60% - 64px);
+  font-size:1.5em;
+  position:absolute;
+  left: calc(40% + 32px);
+  bottom:calc(var(--carousel-height) + 32px);
+}
+.closerBlock .pricer{
+  float:left;
+}
+.closerBlock .addCart{
+  float:right;
+  background-color:rgba(16, 83, 206, 0.3);
+  color:var(--grey-color);
+  cursor: pointer;
+  padding:8px;
+}
+.closerBloc .addCart:hover{
+  background-color:rgba(16, 83, 206, 0.75);
+  color:var(--white-color);
+}
+.closerBloc .addCart:active{
+  background-color:rgba(16, 83, 206, 1);
+  color:var(--white-color);
+}
 
 @media (max-width: 575.98px) {
 }

@@ -14,5 +14,5 @@ FROM
       ORDER BY q.sort_order
       ) qs ) as questions
     FROM surveys as s
-    WHERE s.id = 16--||_id_||
+    WHERE s.id = ||_id_||
   ) t;

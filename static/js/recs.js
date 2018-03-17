@@ -47,8 +47,13 @@ function setSubCarousel(){
     $(newId).addClass("showSubImage");
 
   });
+}
 
-
+function SetAddToCart(){
+  $("button.addCart").click(function(){
+    carouselImgID = $(this).attr('data-carousel');
+    console.log(carouselImgID);
+  })
 }
 
 $(document).ready(function(){
