@@ -33,14 +33,14 @@ def getQuiz(questionID, occasionID):
 def saveProfile():
   profile = request.get_json()
   response = {"profileID": 1}
-  return jsonify(response) #render_template("recStuff/recTrial.html")
+  return jsonify(response)
 
 @app.route("/recs/<int:profileID>")
 def getRecommendation(profileID):
   recs = dbHand.getGifts()
   recPage = recB.BuildRecommendations(recs)
+  #return render_template("recStuff/recTrial.html")
   return render_template_string(recPage)
-
 
 if __name__ == '__main__':
   app.run()

@@ -2,7 +2,7 @@ import json
 
 
 def BuildRecommendations(recDict):
-  recTemplateHandle = "templates/recStuff/recTemplate.html"
+  recTemplateHandle = "templates/recStuff/recTemplateSignup.html"
   recBlockHandle = "templates/recStuff/recBlock.html"
   carBlockHandle = "templates/recStuff/carouselBlock.html"
   subCarBlockHandle = "templates/recStuff/subCarouselBlock.html"

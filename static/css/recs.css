@@ -49,6 +49,9 @@ html, body{
 .navbar-light .navbar-nav .nav-link{
   color:var(--black-color);
 }
+#giftbasketLink{
+  cursor: pointer;
+}
 h1{
   font-family: var(--fancy-font);
   width:100%;
@@ -279,6 +282,259 @@ a.prev,a.next{
 .closerBloc .addCart:active{
   background-color:rgba(16, 83, 206, 1);
   color:var(--white-color);
+}
+.giftBasket{
+  display:none;
+  position:fixed;
+  width:480px;
+  max-width:100%;
+  height:100%;
+  top:0;
+  right:0;
+  z-index:99;
+  background-color:var(--white-color);
+  font:12pt;
+}
+.giftOverlay{
+  display:none;
+  position:fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:98;
+  background-color:rgba(30,30,30,0.7);
+}
+.basketHead{
+  width:100%;
+  height:2em;
+  line-height: 2em;
+  vertical-align: middle;
+  clear:both;
+  background-color:var(--accent-color);
+  color:#fff;
+  padding-left:8px;
+  padding-right:8px;
+  cursor:pointer;
+}
+.itemizer{
+  float:none;
+  width:100%;
+  clear:both;
+  height:calc(60% - 1em);
+  overflow-y:scroll;
+  padding-left:16px;
+  padding-right:16px;
+}
+.itemizer h2{
+  padding-bottom:0px;
+}
+.chosenGifts{
+  width:100%;
+}
+.basketGift{
+  width:100%;
+  height:9em;
+  background-color:white;
+  margin-top:16px;
+  position:relative;
+}
+.basketGift .deleter{
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  background-color:var(--white-color);
+  color:var(--grey-color);
+  width:25px;
+  height:25px;
+  line-height:25px;
+  vertical-align: middle;
+  text-align: center;
+  display:none;
+  cursor: pointer;
+}
+.basketGift:hover .deleter{
+  display:block;
+}
+.basketGift .imageBox{
+  float:left;
+  height:100%;
+  max-width:30%;
+  overflow:hidden;
+}
+.basketGift .imageBox .pricer{
+  padding:8px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  background-color:rgba(30,30,30,0.6);
+  color:#fff;
+}
+
+.basketGift .imageBox img{
+  height:100%;
+
+}
+.basketGift .tinyDesc{
+  float:left;
+  width:70%;
+  height:100%;
+  padding:16px;
+  overflow: hidden;
+}
+.tinyDesc h6{
+  font-size:10pt;
+  font-weight:bold;
+}
+.tinyDesc p{
+  font-size:10pt;
+  color:var(--grey-color);
+}
+
+.totalizer{
+  float:none;
+  width:100%;
+  clear:both;
+  height:calc(40% - 1em);
+  background-color:var(--black-color);
+  color:var(--white-color);
+  padding-left:16px;
+  padding-right:16px;
+  text-align:center;
+}
+
+.subtotaler{
+  float:none;
+  width:100%;
+  clear:both;
+  font-size:16pt;
+}
+.stLabel{
+  display:block;
+  float:left;
+  padding:16px;
+}
+.subtotal{
+  display:block;
+  float:right;
+  padding:16px;
+}
+.stAnnotation{
+  float:none;
+  width:100%;
+  clear:both;
+  text-align: left;
+  font-size:10pt;
+}
+.checkoutBtn{
+  width:80%;
+  min-width:200px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:var(--accent-color);
+  color:var(--black-color);
+  border:1px solid transparent;
+  font-weight: bold;
+  cursor:pointer;
+  margin-top:16pt;
+}
+.checkoutBtn:hover{
+  background-color: rgba(16, 83, 206, 0.99);
+}
+.checkoutBtn:active{
+  background-color: rgba(16, 83, 206, 0.9);
+  color:var(--white-color);
+}
+
+.signupOverlay{
+  width:100%;
+  height:100%;
+  background-color:rgba(30,30,30,0.7);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:70;
+  display:none;
+}
+.signupForm{
+  width:80%;
+  min-height:80%;
+  background-color:var(--white-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position:fixed;
+  top:32px;
+  left:10%;
+  padding:32px;
+  z-index: 71;
+  display:none;
+}
+.signupItem{
+  width:100%;
+  margin-bottom:16px;
+  float:none;
+  clear:both;
+  text-align:left;
+}
+.signupItem span{
+  display:block;
+  float:left;
+  clear:both;
+}
+.signupInput{
+  width:100%;
+  height:1.8em;
+  border:1px solid var(--grey-color);
+  background-color:#fff;
+  padding-top:16px;
+  padding-bottom:16px;
+  padding-left:8px;
+  padding-right:8px;
+}
+.yellow{
+  background-color:#fffdd0;
+}
+
+button#signup {
+  background-color:var(--accent-color);
+  color:var(--grey-color);
+  width:100%;
+  padding:16px;
+  text-align:center;
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button#signup:hover{
+  color:#fff;
+}
+button#signup:active{
+  color:#d0d0d0;
+}
+
+.signupCheck{
+  width:1em;
+  height:1em;
+  border:1px solid var(--grey-color);
+  background-color:transparent;
+}
+
+.signupCheck:checked{
+  padding:2px;
+  background-color:var(--accent-color);
+}
+
+#dvLoading{
+  position:fixed;
+  height:100%;
+  width:100%;
+  background-color:rgba(30,30,30,.75);
+  top:0;
+  left:0;
+  display:none;
+  text-align:center;
+  padding:50px;
 }
 
 @media (max-width: 575.98px) {
