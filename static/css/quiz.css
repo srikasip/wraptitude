@@ -40,7 +40,9 @@ html, body{
 .navbar-light .navbar-nav .nav-link{
   color:var(--black-color);
 }
-
+.allQuestionsSlider {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
 h2{
   font-family: var(--fancy-font);
@@ -109,6 +111,20 @@ h4{
   padding-right:32px;
   color:var(--white-color);
   border:3px solid var(--white-color);
+  border-radius:3px;
+  display:block;
+  clear:both;
+  float:right;
+  cursor:pointer;
+  margin-top:2em;
+}
+.lastQuestion{
+  background-color:var(--white-color);
+  padding:8px;
+  padding-left:32px;
+  padding-right:32px;
+  color:var(--black-color);
+  border:3px solid var(--accent-color);
   border-radius:3px;
   display:block;
   clear:both;

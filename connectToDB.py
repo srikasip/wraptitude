@@ -16,15 +16,16 @@ password = "a7ed71fef239b7582c87af0a14c25bb89b4f86f6d66f19d577a7db9b38512094"
 # port =''
 # password = ''
 
-# database = "SurgFakeNameDB"
-# user = "srikasip"
-# host = "localhost"
-# port =''
-# password = ''
+
+def getGifts():
+  fileName = "grabData/getGifts.sql"
+  jsonString = runFileStatement(fileName, [])
+
+  return jsonString
 
 def getSurveyQuestions(expID):
   fileName = "grabData/grabQuizData.sql"
-  replacers = [{"holdText": "||id||", "replaceText": str(expID)}]
+  replacers = [{"holdText": "||_id_||", "replaceText": str(expID)}]
   jsonString = runFileStatement(fileName, replacers)
 
   #quizObj = json.load(jsonString)
@@ -49,3 +50,10 @@ def connectToDB(command):
   
   conn.close()
   return allData
+
+
+
+
+
+
+

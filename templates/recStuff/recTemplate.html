@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/recs.js') }}"></script>
 
     <!-- Get bootstrap up as css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -20,10 +20,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/quiz.css')}}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/recs.css')}}" media="screen" />
     <script>
-      var occasion = '||_occasion_||';
-      var question = '||_questionID_||';
     </script>
 
   </head>
@@ -48,8 +46,20 @@
       </div>
     </nav>
 
-    <div class="allQuestionsSlider">
-      ||_REPLACE ME WITH QUIZ_||
+    <div class="scene">
+      <h1>Gift Recommendations</h1>
+      <h4>Wrapt found these items uniquely suited to her personality, passions &amp; purpose.</h4>
+      <div class="allRecs">
+        <!-- Next and previous buttons -->
+        ||_RecommendationSlides_||
+        <a class="prev" tabindex=2 onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" tabindex=1 onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          ||_CarouselColumns_||
+        </div>
+      </div>
     </div>
 
     <div class="footer">

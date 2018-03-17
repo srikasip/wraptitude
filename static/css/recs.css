@@ -1,0 +1,271 @@
+html{
+  --copy-size: 12pt;
+  --title-size:18pt;
+  --padding-def:16px;
+  --accent-color:#92a7ce;
+  --grey-color:#4e4c4d;
+  --black-color:#333;
+  --white-color:#f8f9fa;
+  --fancy-font:"Montserrat";
+  --reg-font:"Montserrat";
+  --carousel-height:100px;
+  text-align:center;
+}
+
+html, body{
+  height:100%;
+  width:100%;
+
+  font-family:var(--reg-font), sans-serif;
+  background-color:var(--white-color);
+}
+.navbar{
+  padding-left:0px;
+  padding-right:0px;
+}
+.logoBox
+{
+  font-family:var(--fancy-font);
+  padding:8px;
+  border: 2px solid var(--accent-color);
+  border-radius:3px;
+  font-size:1.5em;
+  letter-spacing: 3px;
+}
+.nav-item{
+  font-family:var(--reg-font);
+  padding-left:30px;
+  width:auto;
+}
+/*.nav-item:before{
+  content:"\25E6";
+  color:var(--accent-color);
+}
+.nav-item:hover:before{
+  content:"\2022";
+  color:var(--accent-color);  
+}*/
+
+.navbar-light .navbar-nav .nav-link{
+  color:var(--black-color);
+}
+
+h2{
+  font-family: var(--fancy-font);
+  width:100%;
+  font-size:1.75em;
+  clear:both;
+  text-align:center;
+  padding-top:32px;
+  padding-bottom:32px;
+}
+
+h4{
+  width:60%;
+  text-align:center;
+  font-size:1em;
+  font-weight:700;
+  margin-left:auto;
+  margin-right:auto;
+  color:var(--grey-color);
+  padding-bottom:32px;
+}
+
+.footer{
+  width:100%;
+  clear:both;
+  border-top:1px solid #bcbcbc;
+  text-align:center;
+  margin-top:1em;
+  padding-bottom:2em;
+}
+
+.footer div{
+  margin-top:4em;
+  text-align:center;
+  float:none;
+  clear:both;
+}
+#icon-gift-better-gift-wrapt{
+  margin-top:4em;
+  width:300px;
+}
+
+
+
+.scene{
+  overflow:hidden;
+  margin-top:32px;
+}
+
+
+.allRecs{
+  clear:both;
+  float:none;
+  width:100%;
+  height:75vh;
+  position:relative;
+  
+}
+.recSlide{
+  width:100%;
+  height:calc(100% - var(--carousel-height));
+  background-color:#fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display:none;
+}
+
+.giftShowcase{
+  width:40%;
+  float:left;
+  height:100%;
+  background-position: top middle;
+  background-size: auto 100%;
+  background-repeat: none;
+  overflow-x: hidden;
+  overflow-y:hidden;
+  position:relative;
+}
+.recSubImage{
+  height:100%;
+  width:auto;
+  display:none;
+}
+.showSubImage{
+  display:block;
+}
+.movers{
+  background-color:var(--black-color);
+  color:var(--white-color);
+  width:40%;
+  float:left;
+  position:absolute;
+  z-index:12;
+  bottom:1em;
+  left:0;
+  text-align:right;
+  padding:8px;
+}
+.mover{
+  cursor: pointer;
+}
+.giftWriteup{
+  float:left;
+  height:100%;
+  width:60%;
+  padding-left:32px;
+}
+
+.giftWriteup .rewrapt-title{
+  display:block;
+  font-family:var(--fancy-font);
+  color:var(--accent-color);
+  clear:both;
+  font-size:1.5em;
+  text-align:left;
+  padding-top:32px;
+  padding-bottom:16px;
+}
+
+.giftWriteup .rewrapt-desc{
+  display:flex;
+  color:var(--grey-color);
+  clear:both;
+  font-size:1em;
+  text-align:left;
+}
+
+.cursor{
+  cursor:pointer;
+}
+a.prev,a.next{
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  /*padding: 16px;*/
+  margin-top: -50px;
+  height:50px;
+  width:50px;
+  line-height: 50px;
+  vertical-align: middle;
+  text-align: center;
+  background-color:var(--accent-color);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  user-select: none;
+  -webkit-user-select: none;
+  color: #fff;
+  text-decoration: none;
+}
+.next {
+  right: 0;
+  /*border-radius: 3px 0 0 3px;*/
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+.row{
+  height:calc(var(--carousel-height) - 20px);
+  margin-top:20px;
+  width:100%;
+  background-color:var(--white-color);
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: calc(100%/6);
+}
+.column img{
+  height:100%;
+  width:auto;
+}
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  body{
+    width:768px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1250px) {
+  body{
+    width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@media (min-width: 1250px) {
+  body{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}

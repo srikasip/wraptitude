@@ -6,7 +6,8 @@ $(document).ready(function(){
 
 function occassionRedirect(){
   $(".occasionsBox .occasion div").click(function(){
-    window.location.replace("/quiz")
+    url = "/quiz/"+$(this).parent().attr('data-question')+"/" + $(this).parent().attr('id');
+    window.location.replace(url);
   });
 }
 

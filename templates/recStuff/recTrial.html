@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>reWrapt</title>
+
+
+    <!-- Get bootstrap and jquery with all dependencies for JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/recs.js') }}"></script>
+
+    <!-- Get bootstrap up as css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/recs.css')}}" media="screen" />
+    <script>
+    </script>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+        <div class="fancyText logoBox">reWrapt</div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="scene">
+      <h2>Gift Recommendations</h2>
+      <h4>Wrapt found these items uniquely suited to her personality, passions &amp; purpose.</h4>
+      <div class="allRecs">
+        <div class="recSlide">
+          <div class="giftShowcase" data-numImages=3>
+            <img id="rec1_1" class="recSubImage showSubImage" src="https://wrapt-gratitude-production.s3.amazonaws.com/uploads/ff85009e-8c28-48c0-8a92-d309db24e455/0036wrapt_small.jpg" />
+            <img id="rec1_2" class="recSubImage" src="https://wrapt-gratitude-production.s3.amazonaws.com/uploads/1516648349-30645-0001-2699/File_Jan_22__11_00_40_AM_small.jpeg" />
+            <img id="rec1_3" class="recSubImage" src="https://wrapt-gratitude-production.s3.amazonaws.com/uploads/1485889665-19928-0210-4766/0403wrapt_small.jpg" />
+            <!-- Next and previous buttons -->
+            <div class="movers">
+              <a id ="rec1_next" class="mover">&#10095;</a>
+            </div>
+          </div>
+          <div class="giftWriteup">
+            <span class="rewrapt-title">Indigo Handloom</span>
+            <span class="rewrapt-desc">
+              Wrap yourself in a luxurious scarf made on the handloom in the ancient khadi tradition.
+            </span>
+          </div>
+        </div>
+        <div class="recSlide">
+          <div class="giftShowcase" style="background-image:url('https://wrapt-gratitude-production.s3.amazonaws.com/uploads/ff85009e-8c28-48c0-8a92-d309db24e455/0036wrapt_small.jpg');"></div>
+          <div class="giftWriteup">
+            Slide 2
+          </div>
+        </div>
+        <div class="recSlide">
+          <div class="giftShowcase" style="background-image:url('https://wrapt-gratitude-production.s3.amazonaws.com/uploads/ff85009e-8c28-48c0-8a92-d309db24e455/0036wrapt_small.jpg');"></div>
+          <div class="giftWriteup">
+            Slide 3
+          </div>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" data-assoc=1 id="tn_1" src="https://wrapt-gratitude-production.s3.amazonaws.com/uploads/ff85009e-8c28-48c0-8a92-d309db24e455/0036wrapt_small.jpg" />
+          </div>
+          <div class="column">
+            <img class="demo cursor" data-assoc=2 id="tn_1" src="https://wrapt-gratitude-production.s3.amazonaws.com/uploads/1516648349-30645-0001-2699/File_Jan_22__11_00_40_AM_small.jpeg" />
+          </div>
+          <div class="column">
+            <img class="demo cursor" data-assoc=3 id="tn_1" src="https://wrapt-gratitude-production.s3.amazonaws.com/uploads/1485889665-19928-0210-4766/0403wrapt_small.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <svg id="icon-gift-better-gift-wrapt" viewBox="0 0 188 32">
+        <use xlink:href="#icon-gift-better-gift-wrapt"></use>
+      </svg>
+      <div>2017 Wrapt™ All Rights Reserved | Privacy Policy | Terms of Service | Returns</div>
+    </div>
+  </body>
+</html>
