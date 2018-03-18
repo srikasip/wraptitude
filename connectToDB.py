@@ -28,9 +28,7 @@ def getSurveyQuestions(expID):
   replacers = [{"holdText": "||_id_||", "replaceText": str(expID)}]
   jsonString = runFileStatement(fileName, replacers)
 
-  #quizObj = json.load(jsonString)
-
-  return jsonString #quizObj
+  return jsonString
 
 def runFileStatement(filename, replaceVars):
   with open(filename, "rU") as sqlHandle:
@@ -47,13 +45,6 @@ def connectToDB(command):
   cur = conn.cursor()
   cur.execute(command)
   allData = cur.fetchall()[0][0]
-  
+
   conn.close()
   return allData
-
-
-
-
-
-
-

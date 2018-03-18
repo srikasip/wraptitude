@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/checkout.js') }}"></script>
 
     <!-- Get bootstrap up as css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -20,12 +20,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/quiz.css')}}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/checkout.css')}}" media="screen" />
     <script>
-      var occasion = '||_occasion_||';
-      var question = '||_questionID_||';
       var experimentGroup = "||_experiment_group_||";
-    
     </script>
 
   </head>
@@ -77,12 +74,21 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Sign in</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" id="giftbasketLink" tabindex=3>Gift basket</a>
+          </li>          
         </ul>
       </div>
     </nav>
 
-    <div class="allQuestionsSlider">
-      ||_REPLACE ME WITH QUIZ_||
+    <div class="scene">
+      <h1>Thank you so much!</h1>
+      <h4>We are still working on this part.</h4>
+      <p>
+        At the moment, we're working through some things on our product. 
+        In the meantime, you can always visit <a href="https://wrapt.com">Wrapt.com</a>.
+      </p>
+      <p>We will let you know when we have a fully functional product up and running</p>
     </div>
 
     <div class="footer">
@@ -90,6 +96,23 @@
         <use xlink:href="#icon-gift-better-gift-wrapt"></use>
       </svg>
       <div>2017 Wrapt™ All Rights Reserved | Privacy Policy | Terms of Service | Returns</div>
+    </div>
+    <div class="giftOverlay"></div>
+    <div class="giftBasket">
+      <div class="basketHead">&#10094; Continue browsing</div>
+      <div class="itemizer">
+        <h2>My Gift Basket</h2>
+        <div id="chosenGifts">
+        </div>
+      </div>
+      <div class="totalizer">
+        <div class="subtotaler">
+          <span class="stLabel">Subtotal:</span>
+          <span class="subtotal">$0.00</span>
+        </div>
+        <div class="stAnnotation"><span id="numItemsInCart">0</span> items in your cart</div>
+        <button class="checkoutBtn">CHECK OUT</button>
+      </div>
     </div>
   </body>
 </html>

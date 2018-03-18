@@ -1,8 +1,8 @@
 import json
 
 
-def BuildRecommendations(recDict):
-  recTemplateHandle = "templates/recStuff/recTemplateSignup.html"
+def BuildRecommendations(recTemplateUrl, recDict):
+  recTemplateHandle = recTemplateUrl
   recBlockHandle = "templates/recStuff/recBlock.html"
   carBlockHandle = "templates/recStuff/carouselBlock.html"
   subCarBlockHandle = "templates/recStuff/subCarouselBlock.html"

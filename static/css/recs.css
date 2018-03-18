@@ -23,6 +23,10 @@ html, body{
   padding-left:0px;
   padding-right:0px;
 }
+.imageHomes{
+  display:none;
+}
+
 .logoBox
 {
   font-family:var(--fancy-font);
@@ -114,9 +118,7 @@ h4{
   float:none;
   width:100%;
   height:75vh;
-  position:relative;
-
-  
+  position:relative;  
 }
 .recSlide{
   width:100%;
@@ -458,8 +460,8 @@ a.prev,a.next{
   display:none;
 }
 .signupForm{
-  width:80%;
-  min-height:80%;
+  width:80vw;
+  height:80vh;
   background-color:var(--white-color);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position:fixed;
@@ -467,6 +469,8 @@ a.prev,a.next{
   left:10%;
   padding:32px;
   z-index: 71;
+  overflow-y:scroll;
+  overflow-x:hidden;
   display:none;
 }
 .signupItem{
@@ -537,10 +541,67 @@ button#signup:active{
   padding:50px;
 }
 
-@media (max-width: 575.98px) {
-}
+@media (max-width: 767.98px) {
+  .allRecs{
+    clear:both;
+    float:none;
+    width:100%;
+    height:auto;
+    overflow-y: hidden;
+    position:relative;  
+  }
+  .recSlide{
+    width:100%;
+    /*height:calc(100% - var(--carousel-height));*/
+    background-color:#fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display:none;
+  }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+  .giftShowcase{
+    width:100%;
+    height:50vh;
+    float:none;
+    background-position: middle middle;
+    background-size: auto 100%;
+    background-repeat: none;
+    overflow-x: hidden;
+    overflow-y:hidden;
+    position:relative;
+    text-align:center;
+  }
+  .giftWriteup{
+    float:none;
+    overflow-y: hidden;
+    width:100%;
+    min-height:40vh;
+    padding-left:8px;
+    padding-right:8px;
+    padding-bottom:4em;
+  }
+
+  .closerBlock{
+    height:2em;
+    width:100%;
+    font-size:1em;
+    padding:8px;
+    position:absolute;
+    left: 0;
+    bottom:calc(var(--carousel-height) + 2.75em);
+  }
+  .closerBlock .pricer{
+    float:left;
+    font-weight:bold;
+  }
+  .closerBlock .addCart{
+    content:"CART";
+    float:right;
+    background-color:rgba(16, 83, 206, 0.3);
+    border:none;
+    color:var(--grey-color);
+    cursor: pointer;
+    padding:8px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
