@@ -4,11 +4,11 @@ from operator import itemgetter
 from pprint import pprint
 
 
-database = "d7vi1mstte1dkp"
-user = "kdenbwpcekclck"
-host = "ec2-54-197-254-189.compute-1.amazonaws.com"
+database = "d9hm1onbau0jau"
+user = "qyobxzafmewrue"
+host = "ec2-54-204-44-140.compute-1.amazonaws.com"
 port ='5432'
-password = "a7ed71fef239b7582c87af0a14c25bb89b4f86f6d66f19d577a7db9b38512094"
+password = "7c7a685d1ab55da990cc12198a9cc64783d9586bcdbc9941a19fabe3311d3438"
 
 # database = "wrapt_gratitude_development"
 # user = "srikasip"
@@ -16,6 +16,13 @@ password = "a7ed71fef239b7582c87af0a14c25bb89b4f86f6d66f19d577a7db9b38512094"
 # port =''
 # password = ''
 
+
+def LoadDB():
+  fileName = "sourcedb.sql"
+  with open(fileName, "r") as sourceLoad:
+    cmd = sourceLoad.read()
+
+  connectToDB(cmd)
 
 def getGifts():
   fileName = "grabData/getGifts.sql"

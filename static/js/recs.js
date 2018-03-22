@@ -1,6 +1,7 @@
 var slideIndex = 1; 
 
 function SetupSignup(){
+  
   $('button#signup').click(function(){
     $(".signupOverlay").css("display", "none");
     $(".signupForm").css("display","none");

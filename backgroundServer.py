@@ -19,7 +19,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
   #TODO: I can render different templates depending on whether we run an experiment
-  inExp = random.choice(["experiment", "control"])
+  # inExp = random.choice(["experiment", "control"])
+  inExp = "control"
   if inExp == "experiment":
     expID = "16"
     templateURL = "templates/homeTemplate.html"
@@ -27,15 +28,18 @@ def index():
     expID = "16"
     templateURL = "templates/homeTemplate.html"
 
+  expData = {}
   quizDict = dbHand.getSurveyQuestions(expID)
   homePage = homeB.LoadHome(quizDict, templateURL)
 
+  
   return render_template_string(homePage)
 
 @app.route('/quiz/<string:questionID>/<string:occasionID>')
 def getQuiz(questionID, occasionID):
   #TODO: Render different templates for the quiz from the database.
-  inExp = random.choice(["experiment", "control"])
+  # inExp = random.choice(["experiment", "control"])
+  inExp = "control"
   if inExp == "experiment":
     expID = "16"
     templateURL = "templates/quizStuff/quiz.html"
@@ -67,8 +71,12 @@ def getRecommendation(profileID):
   else:
     templateURL = "templates/recStuff/recTemplate.html"
   
+  expData = {}
+  expData["Signup"] = {"Category": "Signup_SignupBeforeRec",
+                       "Action": inExp
+                      }
   recPage = recB.BuildRecommendations(templateURL, recs)
-  recPage = recPage.replace("||_experiment_group_||", inExp)
+  recPage = recPage.replace('"||_experiment_group_||"', json.dumps(expData))
   #return render_template("recStuff/recTrial.html")
   return render_template_string(recPage)
 
