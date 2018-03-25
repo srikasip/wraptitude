@@ -67,16 +67,12 @@ def getRecommendation(profileID):
   inExp = random.choice(["experiment", "control"])
 
   if inExp == "experiment":
-    templateURL = "templates/recStuff/recTemplateSignup.html"
-  else:
     templateURL = "templates/recStuff/recTemplate.html"
+  else:
+    templateURL = "templates/recStuff/recTemplateSignup.html"
   
-  expData = {}
-  expData["Signup"] = {"Category": "Signup_SignupBeforeRec",
-                       "Action": inExp
-                      }
   recPage = recB.BuildRecommendations(templateURL, recs)
-  recPage = recPage.replace('"||_experiment_group_||"', json.dumps(expData))
+  recPage = recPage.replace('||_experiment_group_||', inExp)
   #return render_template("recStuff/recTrial.html")
   return render_template_string(recPage)
 

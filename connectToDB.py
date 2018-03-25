@@ -16,14 +16,6 @@ password = "7c7a685d1ab55da990cc12198a9cc64783d9586bcdbc9941a19fabe3311d3438"
 # port =''
 # password = ''
 
-
-def LoadDB():
-  fileName = "sourcedb.sql"
-  with open(fileName, "r") as sourceLoad:
-    cmd = sourceLoad.read()
-
-  connectToDB(cmd)
-
 def getGifts():
   fileName = "grabData/getGifts.sql"
   jsonString = runFileStatement(fileName, [])
