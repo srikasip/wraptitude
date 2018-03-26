@@ -48,6 +48,7 @@ def getQuestion(qDict, qNum, totalNum):
   questionIns = questionTemplate.replace("||_count_||", str(qNum) + " of " + str(totalNum))
   questionIns = questionIns.replace("||_questionType_||", isType)
   questionIns = questionIns.replace("||_questionID_||", str(qDict["id"]))
+  questionIns = questionIns.replace("||question-order||", str(qNum))
 
   questionIns = questionIns.replace("||_prog_||", str(qNum)+" * 100% / " + str(totalNum))
 

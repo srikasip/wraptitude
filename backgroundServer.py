@@ -39,9 +39,9 @@ def index():
 def getQuiz(questionID, occasionID):
   #TODO: Render different templates for the quiz from the database.
   # inExp = random.choice(["experiment", "control"])
-  inExp = "control"
+  inExp = random.choice(["experiment", "control"])
   if inExp == "experiment":
-    expID = "16"
+    expID = "30"
     templateURL = "templates/quizStuff/quiz.html"
   else:
     expID = "16"
