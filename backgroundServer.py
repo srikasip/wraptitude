@@ -60,6 +60,9 @@ def saveProfile():
   response = {"profileID": 1}
   return jsonify(response)
 
+@app.route("/checkout")
+def getCheckout():
+  return render_template("checkout/checkout.html")
 
 @app.route("/recs/<int:profileID>")
 def getRecommendation(profileID):

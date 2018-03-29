@@ -14,8 +14,20 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-116120081-1');
-    </script>
 
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          console.log("Checked out");
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-811549726/AjeGCMSl2n8Qnoj9ggM',
+            'event_callback': callback
+        });
+        return false;
+      }
+      gtag('config', 'AW-811549726');
+      gtag_report_conversion("/checkout");
+    </script>
     <!-- Get bootstrap and jquery with all dependencies for JS -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -90,38 +102,20 @@
       </div>
     </nav>
 
-    <div class="scene">
-      <h1>Thank you so much!</h1>
-      <h4>We are still working on this part.</h4>
+    <div class="scene" style="margin-top:64px;">
+      <h1 style="text-align:center;">Drats! We're not quite ready</h1>
+      <h4>We'll get back to you lickety-split!</h4>
       <p>
-        At the moment, we're working through some things on our product. 
-        In the meantime, you can always visit <a href="https://wrapt.com">Wrapt.com</a>.
+        Thanks so much for your interest in our platform.  We're still working out some details to make sure we can fulfill your order and send out 
+        a beautiful gift-package.
       </p>
-      <p>We will let you know when we have a fully functional product up and running</p>
     </div>
 
-    <div class="footer">
+    <div class="footer" style="margin-top:64px;">
       <svg id="icon-gift-better-gift-wrapt" viewBox="0 0 188 32">
         <use xlink:href="#icon-gift-better-gift-wrapt"></use>
       </svg>
       <div>2017 Wrapt™ All Rights Reserved | Privacy Policy | Terms of Service | Returns</div>
-    </div>
-    <div class="giftOverlay"></div>
-    <div class="giftBasket">
-      <div class="basketHead">&#10094; Continue browsing</div>
-      <div class="itemizer">
-        <h2>My Gift Basket</h2>
-        <div id="chosenGifts">
-        </div>
-      </div>
-      <div class="totalizer">
-        <div class="subtotaler">
-          <span class="stLabel">Subtotal:</span>
-          <span class="subtotal">$0.00</span>
-        </div>
-        <div class="stAnnotation"><span id="numItemsInCart">0</span> items in your cart</div>
-        <button class="checkoutBtn">CHECK OUT</button>
-      </div>
     </div>
   </body>
 </html>

@@ -116,6 +116,10 @@ $(document).ready(function(){
   SetupSignup();
   showSlides(slideIndex);
 
+  $(".checkoutBtn").click(function(){
+    window.location.replace("/checkout");
+  });
+
   $("#dvLoading").css("display", "block");
   setTimeout(function(){
       $("#dvLoading").css("display", "none");
