@@ -66,14 +66,18 @@ def getCheckout():
 
 @app.route("/recs/<int:profileID>")
 def getRecommendation(profileID):
-  recs = dbHand.getGifts()
-  inExp = random.choice(["experiment", "control"])
+  gSet1 = "('G-DB-JWL-EAR-006','G-DB-JWL-NEC-001','G-IH-ACS-SCF-001','G-ML-ACS-BAG-003','G-ET-CNS-GAS-003','G-AL-BNB-BTH-003')"
+  gSet2 = "('G-GH-GDN-GAC-001','G-IH-ACS-SCF-002','G-GH-TBT-SVW-006','G-KF-JWL-EAR-007','G-LS-TBT-SVW-004','G-DB-JWL-NEC-007')"
 
+  giftSet = random.choice([gSet1, gSet2])
+  recs = dbHand.getGifts(giftSet)
+  
+  inExp = random.choice(["experiment", "control"])
   if inExp == "experiment":
     templateURL = "templates/recStuff/recTemplate.html"
   else:
     templateURL = "templates/recStuff/recTemplateSignup.html"
-  
+
   recPage = recB.BuildRecommendations(templateURL, recs)
   recPage = recPage.replace('||_experiment_group_||', inExp)
   #return render_template("recStuff/recTrial.html")
@@ -81,3 +85,4 @@ def getRecommendation(profileID):
 
 if __name__ == '__main__':
   app.run()
+

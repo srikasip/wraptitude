@@ -16,9 +16,10 @@ password = "7c7a685d1ab55da990cc12198a9cc64783d9586bcdbc9941a19fabe3311d3438"
 # port =''
 # password = ''
 
-def getGifts():
+def getGifts(listOfGifts):
   fileName = "grabData/getGifts.sql"
-  jsonString = runFileStatement(fileName, [])
+  replacers = [{"holdText": "||//FixedSetOfGifts//||", "replaceText": listOfGifts}]
+  jsonString = runFileStatement(fileName, replacers)
 
   return jsonString
 

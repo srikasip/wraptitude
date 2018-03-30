@@ -46,5 +46,7 @@ FROM
           On g.product_category_id = cat.id
         Join product_categories as subCat 
           On g.product_subcategory_id = subCat.id
-      LIMIT(6)
+      WHERE
+        g.wrapt_sku in ||//FixedSetOfGifts//||
   ) t;
+
