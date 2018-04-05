@@ -37,7 +37,7 @@ FROM
         LEFT JOIN product_images as pimg
          ON gimg.product_image_id = pimg.id 
         WHERE gimg.gift_id = g.id 
-          and ((gimg.product_image_id>=1 and pimg.width>pimg.height) or (gimg.width>gimg.height))
+          and ((gimg.product_image_id>=1 and pimg.width>pimg.height) or (gimg.width>gimg.height) or (gimg.product_image_id>=1 and pimg.width<=pimg.height) or (gimg.width<=gimg.height))
         Order by gimg.gift_id, gimg.sort_order
         LIMIT(1)) img_car) as carousel_img
       FROM 
